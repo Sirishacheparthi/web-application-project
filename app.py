@@ -8,7 +8,7 @@ dataset=pd.read_csv_('crop.csv')
 X=dataset.iloc[:,:-1].values
 Y=dataset.iloc[:,-1].values
 
-X_train,_X_test,_Y_train,Y_test=train_test_spilt(X,Y,test_size=0.2)
+X_train,X_test,Y_train,Y_test=train_test_spilt(X,Y,test_size=0.2)
 
 classifier=LogisticRegression()
 classifier.fit(X_train,_Y_train)
